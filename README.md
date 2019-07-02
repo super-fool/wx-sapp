@@ -29,11 +29,22 @@ Android |  V8    | Chromium
 ### JSON配置
 JSON 是一种数据格式，我们通常用来表示**静态配置**
 
-`app.json`：全局配置，包括页面路径，通用样式，[参考配置](https://developers.weixin.qq.com/miniprogram/dev/framework/config.html)
+`app.json`：全局配置，包括页面路径，通用样式，[参考配置](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html)
 
 
 ### app.json
 > pages: 页面路径
 是一个数组, 第一项作为首页.
 
-> window: 全局默认窗口样式
+> window: 全局默认配置
+
+> plugins: 声明需要的插件,需要在**设置-第三方服务-插件管理**进行配置;可以配合 subpackages进行分包加载插件; functionalPages:来声明开发功能页.
+
+> preloadRule: 进行分包预下载.
+
+> navigateToMiniProgramAppIdList: 跳转至其他小程序.
+
+> usingComponents: 声明全局自定义组件.
+
+> permission: 接口权限相关设置.
+
