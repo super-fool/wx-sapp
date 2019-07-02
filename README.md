@@ -23,5 +23,17 @@ Android |  V8    | Chromium
 开发工具 | NWJS   | chrome webview 
 
 
+# 小程序
+## 架构
+
+### JSON配置
+JSON 是一种数据格式，我们通常用来表示**静态配置**
+
+`app.json`：全局配置，包括页面路径，通用样式，[参考配置](https://developers.weixin.qq.com/miniprogram/dev/framework/config.html)
 
 
+### app.json
+> pages: 页面路径
+是一个数组, 第一项作为首页.
+
+> window: 全局默认窗口样式

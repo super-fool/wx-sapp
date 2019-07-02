@@ -1,0 +1,19 @@
+{
+  "pages": ["pages/index/index", "pages/logs/logs", "pages/q&a/q&a"],
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#646464",
+    "navigationBarTitleText": "进击的前端",
+    "navigationBarTextStyle": "#fff",
+    "navigationStyle": "custom"
+  },
+
+  "tabBar": {
+    "backgroundColor": "#646464",
+    "list": [
+      { "text": "首页", "pagePath": "pages/index/index" },
+      { "text": "提问区", "pagePath": "pages/q&a/q&a" }
+    ]
+  }
+}
