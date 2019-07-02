@@ -15,5 +15,11 @@
       { "text": "首页", "pagePath": "pages/index/index" },
       { "text": "提问区", "pagePath": "pages/q&a/q&a" }
     ]
+  },
+
+  "debug": false,
+
+  "usingComponents": {
+    "common-navbar": "components/custom-navbar"
   }
 }
