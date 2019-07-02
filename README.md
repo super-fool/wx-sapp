@@ -29,22 +29,37 @@ Android |  V8    | Chromium
 ### JSON配置
 JSON 是一种数据格式，我们通常用来表示**静态配置**
 
-`app.json`：全局配置，包括页面路径，通用样式，[参考配置](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html)
-
+`app.json`：全局配置清单，包括页面路径，通用样式，[参考配置](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html)
 
 ### app.json
 > pages: 页面路径
 是一个数组, 第一项作为首页.
 
-> window: 全局默认配置
+- window: 全局默认配置
 
-> plugins: 声明需要的插件,需要在**设置-第三方服务-插件管理**进行配置;可以配合 subpackages进行分包加载插件; functionalPages:来声明开发功能页.
+- plugins: 声明需要的插件,需要在**设置-第三方服务-插件管理**进行配置;可以配合 subpackages进行分包加载插件; functionalPages:来声明开发功能页.
 
-> preloadRule: 进行分包预下载.
+- preloadRule: 进行分包预下载.
 
-> navigateToMiniProgramAppIdList: 跳转至其他小程序.
+- navigateToMiniProgramAppIdList: 跳转至其他小程序.
 
-> usingComponents: 声明全局自定义组件.
+- usingComponents: 声明全局自定义组件.
 
-> permission: 接口权限相关设置.
+- permission: 接口权限相关设置.
 
+### project.config.json
+
+个性化配置清单
+[参考配置](https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html)
+
+
+
+## WXML 模板
+是一个被封装了多个微信标签(组件)的*HTML模板*, 例如:`view,button`; 在这些标签中也封装了微信的标签属性,例如:`wx:if`
+
+> 目的就是:**让开发人员只关注状态管理和业务逻辑**,实现`OOP/COP`模式,而不是`POP`模式.
+
+
+
+## WXSS 模板
+样式属性与`CSS`一致, 只不过新增了`rpx`尺寸单位. 减少了适配性的问题.
