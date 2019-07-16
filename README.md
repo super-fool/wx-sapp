@@ -72,16 +72,21 @@ JSON 是一种数据格式，我们通常用来表示**静态配置**
 #### 全局函数：app.js
 小程序进入后，第一步会调用`app.js`全局脚本。在里面只有一个`App(options)`函数,里面注入了以下几个监听函数及一个全局对象：
 ```js
+globalData: {}, // 全局数据
 onLaunch(){},// init
-onUnlaunch(){}, // destory
 onShow(){}, // inited & show
 onHide(){}, // hide
 onPageNotFound(){}, // not found
 userInfoReadyCallback(){}, // 这个
-globalData: {}, // 全局数据
+onUnlaunch(){}, // destory
 ```
 所有函数的this都是指向该`App(options)`这个参数。
 
 通过`getApp()`获取全局实例。
 
 #### 页面函数：page.js
+
+## 路由
+
+> 注意：
+1. 使用`wx.navigateTo`不能跳转在`app.json`已经注册了`tabBar`的路由，否则报错：`navigateTo:fail can not navigateTo a tabbar page`
