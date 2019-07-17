@@ -54,12 +54,22 @@ JSON 是一种数据格式，我们通常用来表示**静态配置**
 
 
 
-## WXML 模板
+### WXML 模板
 是一个被封装了多个微信标签(组件)的*HTML模板*, 例如:`view,button`; 在这些标签中也封装了微信的标签属性,例如:`wx:if`
 
 > 目的就是:**让开发人员只关注状态管理和业务逻辑**,实现`OOP/COP`模式,而不是`POP`模式.
 
 
 
-## WXSS 模板
+### WXSS 模板
 样式属性与`CSS`一致, 只不过新增了`rpx`尺寸单位. 减少了适配性的问题.
+
+
+## 宿主环境
+[文档地址](https://developers.weixin.qq.com/miniprogram/dev/framework/quickstart/framework.html#%E6%B8%B2%E6%9F%93%E5%B1%82%E5%92%8C%E9%80%BB%E8%BE%91%E5%B1%82)
+宿主环境包含:
+1. 渲染层(App Service): WXML, WXSS 
+2. 逻辑层(View): JS
+3. 微信客户端(Native): 
+    - 逻辑层和渲染层交互的介质,即MVVM中的VM层.
+    - 逻辑层中接口请求至后端的中间层,即请求必须先通过Native再请求第三方服务器.
