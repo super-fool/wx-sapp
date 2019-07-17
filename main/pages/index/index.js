@@ -9,6 +9,28 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+
+  onNavigate: function() {
+    // wx.navigateTo({
+    //   url: '../q&a/q&a',
+    //   success() {
+    //     console.log('success');
+    //   },
+    //   fail(err) {
+    //     console.log(err)
+    //   }
+    // })
+    wx.switchTab({
+      url: '../q&a/q&a',
+      success() {
+        console.log('success');
+      },
+      fail(err){
+        console.log(err)
+      }
+    })
+  },
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({

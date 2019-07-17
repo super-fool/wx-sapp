@@ -12,7 +12,7 @@ JS-SDK 是对 WeiXinJSBridge API 的一个包装或者说是他的超集。
 
 为了提供更快的加载速度，更强大的能力，更高效的开发，便产生了**小程序**。
 
-## 小程序与网页的区别
+> 小程序与网页的区别:
 1. 小程序的渲染层和逻辑层是分开的，逻辑层是运行在JSCore中的，无法去调用DOM/BOM API及JQ和VUE等包含DOM的框架库。
 2. 小程序所在意的兼容性只有IOS和Android.
  
@@ -24,6 +24,7 @@ Android |  V8    | Chromium
 
 
 # 小程序
+
 ## 架构
 
 ### JSON配置
@@ -59,8 +60,12 @@ JSON 是一种数据格式，我们通常用来表示**静态配置**
 
 > 目的就是:**让开发人员只关注状态管理和业务逻辑**,实现`OOP/COP`模式,而不是`POP`模式.
 
+## WXSS 模板
+样式属性与`CSS`一致, 只不过新增了`rpx`尺寸单位. 减少了适配性的问题.
 
+## 框架
 
+<<<<<<< HEAD
 ### WXSS 模板
 样式属性与`CSS`一致, 只不过新增了`rpx`尺寸单位. 减少了适配性的问题.
 
@@ -73,3 +78,24 @@ JSON 是一种数据格式，我们通常用来表示**静态配置**
 3. 微信客户端(Native): 
     - 逻辑层和渲染层交互的介质,即MVVM中的VM层.
     - 逻辑层中接口请求至后端的中间层,即请求必须先通过Native再请求第三方服务器.
+
+### 逻辑层
+
+#### 全局函数：app.js
+小程序进入后，第一步会调用`app.js`全局脚本。在里面只有一个`App(options)`函数,里面注入了以下几个监听函数及一个全局对象：
+```js
+globalData: {}, // 全局数据
+onLaunch(){},// init
+onShow(){}, // inited & show
+onHide(){}, // hide
+onPageNotFound(){}, // not found
+userInfoReadyCallback(){}, // 这个
+onUnlaunch(){}, // destory
+```
+所有函数的this都是指向该`App(options)`这个参数。
+
+通过`getApp()`获取全局实例。
+
+#### 页面函数：page.js
+
+## 路由

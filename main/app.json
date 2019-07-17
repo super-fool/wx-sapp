@@ -1,25 +1,34 @@
 {
-  "pages": ["pages/index/index", "pages/logs/logs", "pages/q&a/q&a"],
-
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/q&a/q&a",
+    "pages/blog/blog",
+    "pages/info/info"
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#646464",
     "navigationBarTitleText": "进击的前端",
-    "navigationBarTextStyle": "#fff",
+    "navigationBarTextStyle": "white",
     "navigationStyle": "custom"
   },
-
   "tabBar": {
     "backgroundColor": "#646464",
     "list": [
-      { "text": "首页", "pagePath": "pages/index/index" },
-      { "text": "提问区", "pagePath": "pages/q&a/q&a" }
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "提问区",
+        "pagePath": "pages/q&a/q&a"
+      }
     ]
   },
-
   "debug": false,
-
   "usingComponents": {
     "common-navbar": "components/custom-navbar"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
