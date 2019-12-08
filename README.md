@@ -98,4 +98,14 @@ onUnlaunch(){}, // destory
 
 #### 页面函数：page.js
 
-## 路由
+## 性能优化
+
+### 列表展示页
+
+小程序在渲染1000个DOM节点以上的页面时， 经常会造成内存不足而出现闪退的问题。
+
+优化点：
+1. 可以通过判断某个组件是否达到渲染临界点再开始渲染，超出屏幕的组件可以使用`WX:IF`来卸载组件。
+
+参考：https://developers.weixin.qq.com/miniprogram/dev/api/wxml/IntersectionObserver.html 
+
