@@ -1,11 +1,28 @@
 .list-scroll {
   height: 100vh;
 }
+.left-list {
+  flex: 30vw;
+}
+.right-list {
+  width: 70vw;
+  margin-right: 30px;
+}
+
+.title {
+  text-align: center;
+  font: 20px 700;
+  color: #333333;
+  margin: 20rpx;
+}
 
 .demo-item {
   text-align: center;
 }
 
-.demo-item:nth-child(2n+1) {
+.demo-item:nth-child(2n) {
   background: #f1f1f1;
+}
+.demo-item:nth-child(2n+1) {
+  background: #d1d1d1;
 }

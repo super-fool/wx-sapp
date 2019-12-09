@@ -5,22 +5,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: []
+    secondList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.loadmore();
+    this.loadmore(); // 初始化加载数据
   },
 
   loadmore: function() {
-    let nowList = `list[${this.data.list.length}]`;
+    let secondListLength = this.data.secondList.length;
+    let nowList = `secondList[${secondListLength}]`;
     let demoList = this.getList(10);
+
     this.setData({
-      [nowList]: demoList
-    })
+      [nowList]: {
+        title: "title - " + (secondListLength + 1),
+        item: demoList
+      }
+    });
+    console.info('子列：%o', this.data.secondList);
   },
   getList: function(num) {
     let list = [];
@@ -32,58 +38,9 @@ Page({
     return list;
   },
   /**
-   * 生成随机（100,400）高度
+   * 生成随机高度 < 300
    */
   getRandomHeight: function() {
-    return parseInt(Math.random() * 100 + 300)
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
+    return parseInt(Math.random() * 100 + 200)
   }
 })

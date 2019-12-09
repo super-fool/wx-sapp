@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "skeleton": "/components/skeleton"
+    "skeleton": "/components/skeleton/skeleton"
   }
 }
