@@ -26,7 +26,7 @@ Page({
         item: demoList
       }
     });
-    console.info('子列：%o', this.data.secondList);
+    console.log('子列：%o', this.data.secondList);
   },
   getList: function(num) {
     let list = [];
@@ -41,6 +41,6 @@ Page({
    * 生成随机高度 < 300
    */
   getRandomHeight: function() {
-    return parseInt(Math.random() * 100 + 200)
+    return parseInt(Math.random() * 100 + 200);
   }
 })

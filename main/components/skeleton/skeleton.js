@@ -1,5 +1,5 @@
 // components/skeleton.js
-import SystemInfo from "../../libs/getSystemInfo.js";
+// import SystemInfo from "../../libs/getSystemInfo.js";
 Component({
   /**
    * 组件的属性列表
@@ -41,7 +41,6 @@ Component({
       let showNum = 2; //超过屏幕的数量，目前这个设置是上下2屏
       try {
         this.extData.listItemContainer = this.createIntersectionObserver();
-        console.log(this.createIntersectionObserver());
         this.extData.listItemContainer
           .relativeToViewport({
             top: showNum * windowHeight,

@@ -1,5 +1,5 @@
 <view class="container">
-  <scroll-view class="list-scroll right-list" scroll-y="{{true}}" lower-threshold="{{100}}" bindscrolltolower="loadmore">
+  <scroll-view class="list-scroll right-list" scroll-y lower-threshold="{{100}}" bindscrolltolower="loadmore">
     <block wx:for-item="parentItem" wx:for-index="parentIndex" wx:for="{{secondList}}" wx:key="{{parentIndex}}">
       <view class="title">{{parentItem.title}}</view>
       <!-- 这个view仅作为间隔区分展示用，并不是必须的 -->
