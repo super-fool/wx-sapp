@@ -17,12 +17,12 @@ Component({
   created() {
     //设置一个走setData的数据池
     this.extData = {
-      listItemContainer: null
+      itemObserver: null
     };
   },
   detached() {
     try {
-      this.extData.listItemContainer.disconnect();
+      this.extData.itemObserver.disconnect();
     } catch (error) {}
     this.extData = null;
   },
@@ -31,7 +31,6 @@ Component({
     this.setData({
       skeletonId: this.randomString(8) //设置唯一标识
     });
-
     wx.nextTick(() => {
       // 修改了监听是否显示内容的方法，改为前后showNum屏高度渲染
       // 监听进入屏幕的范围relativeToViewport({top: xxx, bottom: xxx})
@@ -40,8 +39,8 @@ Component({
       let { windowHeight = 667 } = info.source.system;
       let showNum = 2; //超过屏幕的数量，目前这个设置是上下2屏
       try {
-        this.extData.listItemContainer = this.createIntersectionObserver();
-        this.extData.listItemContainer
+        this.extData.itemObserver = this.createIntersectionObserver();
+        this.extData.itemObserver
           .relativeToViewport({
             top: showNum * windowHeight,
             bottom: showNum * windowHeight

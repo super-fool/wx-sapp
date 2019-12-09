@@ -38,9 +38,9 @@ Page({
     return list;
   },
   /**
-   * 生成随机高度 < 300
+   * 生成随机高度 < 600
    */
   getRandomHeight: function() {
-    return parseInt(Math.random() * 100 + 200);
+    return parseInt(Math.random() * 100 + 500);
   }
 })
