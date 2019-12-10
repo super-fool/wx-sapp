@@ -7,7 +7,7 @@ Page({
     leftList: [],
     rightList: [],
     selectedTitle: "",
-    leftCurrentItem: 0
+    leftCurrentItem: ""
   },
 
   /**
@@ -40,9 +40,16 @@ Page({
     let itemObserver = wx.createIntersectionObserver();
     itemObserver
       .relativeTo(".scroll-list-right")
-      .observe("#title-" + (rightListLength + 1), res => {
-        console.log(res);
-      });
+      .observe(
+        "#title-" + (rightListLength + 1),
+        ({ id, intersectionRect }) => {
+          if (intersectionRect.top !== 0 && intersectionRect !== 0) {
+            this.setData({
+              leftCurrentItem: id
+            });
+          }
+        }
+      );
   },
   getList: function(num) {
     let list = [];
