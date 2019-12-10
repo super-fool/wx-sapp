@@ -1,8 +1,7 @@
-.list-scroll {
-  height: 100vh;
-}
-.left-list {
+
+.scroll-list-left {
   flex: 30vw;
+  height: 100vh;
   margin: 20px 10px 0 0;
   text-align: center;
   border-right: #f1f1f1 solid 1px;
@@ -15,7 +14,8 @@
 .current-item {
   border-left: 10px solid red;
 }
-.right-list {
+.scroll-list-right {
+  height: 100vh;
   width: 70vw;
 }
 

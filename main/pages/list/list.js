@@ -36,6 +36,13 @@ Page({
         id: rightListLength
       }
     });
+
+    let itemObserver = wx.createIntersectionObserver();
+    itemObserver
+      .relativeTo(".scroll-list-right")
+      .observe("#title-" + (rightListLength + 1), res => {
+        console.log(res);
+      });
   },
   getList: function(num) {
     let list = [];

@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "skeleton": "/components/skeleton/skeleton"
+    "sub-skeleton": "/components/sub-skeleton/index",
+    "parent-skeleton": "/components/parent-skeleton/index"
   }
 }
