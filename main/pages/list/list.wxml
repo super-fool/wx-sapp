@@ -1,7 +1,12 @@
 <view class="container">
-  <scroll-view class="list-scroll right-list" scroll-y lower-threshold="{{100}}" bindscrolltolower="loadmore">
-    <block wx:for-item="parentItem" wx:for-index="parentIndex" wx:for="{{secondList}}" wx:key="{{parentIndex}}">
-      <view class="title">{{parentItem.title}}</view>
+  <scroll-view class="list-scroll left-list" scroll-y>
+    <block wx:for="{{leftList}}" wx:for-item="leftItem" wx:for-index="leftIndex" wx:key="{{leftItem.id}}">
+      <view class="title-item" bindtap="selectTitle" data-title="{{leftItem.title}}">{{leftItem.title}}</view>
+    </block>
+  </scroll-view>
+  <scroll-view class="list-scroll right-list" scroll-y lower-threshold="{{100}}" bindscrolltolower="loadmore" scroll-into-view="{{selectedTitle}}" scroll-with-animation="{{true}}" scroll-top="{{200}}">
+    <block wx:for="{{rightList}}" wx:for-item="parentItem" wx:for-index="parentIndex" wx:key="{{parentIndex}}">
+      <view class="title" id="{{parentItem.title}}">{{parentItem.title}}</view>
       <!-- 这个view仅作为间隔区分展示用，并不是必须的 -->
       <view class="demo-item" wx:for="{{parentItem.item}}" wx:for-item="subItem" wx:key="{{index}}">
         <!-- 骨架 -->

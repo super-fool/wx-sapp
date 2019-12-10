@@ -1,11 +1,12 @@
 // pages/list/list.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    secondList: []
+    leftList: [],
+    rightList: [],
+    selectedTitle: ""
   },
 
   /**
@@ -14,19 +15,29 @@ Page({
   onLoad: function(options) {
     this.loadmore(); // 初始化加载数据
   },
-
+  selectTitle: function({ target }) {
+    this.setData({
+      selectedTitle: target.dataset.title
+    });
+  },
   loadmore: function() {
-    let secondListLength = this.data.secondList.length;
-    let nowList = `secondList[${secondListLength}]`;
+    let rightListLength = this.data.rightList.length;
+    let rightNowList = `rightList[${rightListLength}]`;
+    let leftNowList = `leftList[${rightListLength}]`;
     let demoList = this.getList(10);
 
     this.setData({
-      [nowList]: {
-        title: "title - " + (secondListLength + 1),
+      [rightNowList]: {
+        title: "title-" + (rightListLength + 1),
         item: demoList
+      },
+      [leftNowList]: {
+        title: "title-" + (rightListLength + 1),
+        id: rightListLength + 1
       }
     });
-    console.log('子列：%o', this.data.secondList);
+    console.log("父列：%o", this.data.leftList);
+    console.log("子列：%o", this.data.rightList);
   },
   getList: function(num) {
     let list = [];
@@ -43,4 +54,4 @@ Page({
   getRandomHeight: function() {
     return parseInt(Math.random() * 100 + 500);
   }
-})
+});

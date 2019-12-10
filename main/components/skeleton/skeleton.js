@@ -34,7 +34,6 @@ Component({
     wx.nextTick(() => {
       // 修改了监听是否显示内容的方法，改为前后showNum屏高度渲染
       // 监听进入屏幕的范围relativeToViewport({top: xxx, bottom: xxx})
-      // let info = SystemInfo.getInfo();
       let info = wx.getStorageSync("SystemInfo");
       let { windowHeight = 667 } = info.source.system;
       let showNum = 2; //超过屏幕的数量，目前这个设置是上下2屏

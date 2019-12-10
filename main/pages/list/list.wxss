@@ -3,10 +3,17 @@
 }
 .left-list {
   flex: 30vw;
+  margin: 20px 10px 0 0;
+  text-align: center;
+  border-right: #f1f1f1 solid 1px;
+}
+.title-item {
+  margin: 20px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #f1f1f1;
 }
 .right-list {
   width: 70vw;
-  margin-right: 30px;
 }
 
 .title {
