@@ -35,7 +35,6 @@ Component({
       // 修改了监听是否显示内容的方法，改为前后showNum屏高度渲染
       // 监听进入屏幕的范围relativeToViewport({top: xxx, bottom: xxx})
       //let info = wx.getStorageSync("SystemInfo");
-
       let { windowHeight = 667 } = wx.getSystemInfoSync();
       let showNum = 2; //超过屏幕的数量，目前这个设置是上下2屏
       try {
@@ -48,20 +47,20 @@ Component({
           .observe(`#list-item-${this.data.skeletonId}`, res => {
             let { intersectionRatio } = res;
             if (intersectionRatio === 0) {
-              // console.log(
-              //   "【卸载】",
-              //   this.data.skeletonId,
-              //   "超过预定范围，从页面卸载"
-              // );
+              console.log(
+                "【卸载】",
+                this.data.skeletonId,
+                "超过预定范围，从页面卸载"
+              );
               this.setData({
                 showSlot: false
               });
             } else {
-              // console.log(
-              //   "【进入】",
-              //   this.data.skeletonId,
-              //   "达到预定范围，渲染进页面"
-              // );
+              console.log(
+                "【进入】",
+                this.data.skeletonId,
+                "达到预定范围，渲染进页面"
+              );
               this.setData({
                 showSlot: true,
                 height: res.boundingClientRect.height
