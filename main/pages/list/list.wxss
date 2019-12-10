@@ -12,6 +12,9 @@
   padding: 20px 0;
   border-bottom: 1px solid #f1f1f1;
 }
+.current-item {
+  border-left: 10px solid red;
+}
 .right-list {
   width: 70vw;
 }
@@ -30,6 +33,6 @@
 .demo-item:nth-child(2n) {
   background: #f1f1f1;
 }
-.demo-item:nth-child(2n+1) {
+.demo-item:nth-child(2n + 1) {
   background: #d1d1d1;
 }

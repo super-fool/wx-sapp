@@ -6,7 +6,8 @@ Page({
   data: {
     leftList: [],
     rightList: [],
-    selectedTitle: ""
+    selectedTitle: "",
+    leftCurrentItem: 0
   },
 
   /**
@@ -25,7 +26,6 @@ Page({
     let rightNowList = `rightList[${rightListLength}]`;
     let leftNowList = `leftList[${rightListLength}]`;
     let demoList = this.getList(10);
-
     this.setData({
       [rightNowList]: {
         title: "title-" + (rightListLength + 1),
@@ -33,11 +33,9 @@ Page({
       },
       [leftNowList]: {
         title: "title-" + (rightListLength + 1),
-        id: rightListLength + 1
+        id: rightListLength
       }
     });
-    console.log("父列：%o", this.data.leftList);
-    console.log("子列：%o", this.data.rightList);
   },
   getList: function(num) {
     let list = [];
@@ -49,9 +47,9 @@ Page({
     return list;
   },
   /**
-   * 生成随机高度 < 600
+   * 生成随机高度 < 300
    */
   getRandomHeight: function() {
-    return parseInt(Math.random() * 100 + 500);
+    return parseInt(Math.random() * 100 + 200);
   }
 });
