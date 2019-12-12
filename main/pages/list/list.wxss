@@ -26,3 +26,9 @@
   color: #333333;
   margin: 20rpx;
 }
+.demo-item{
+  border-radius: 20rpx;
+  border: #f1f1f1 solid 1px;
+  margin: 10rpx;
+
+}

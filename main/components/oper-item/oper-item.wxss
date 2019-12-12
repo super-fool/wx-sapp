@@ -1,7 +1,7 @@
 .oper-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 .reduce-frame {
@@ -9,12 +9,14 @@
   width: 60rpx;
   border-radius: 50%;
   border: 1px solid #dddddd;
+  box-sizing: border-box;
 }
 .add-frame {
   height: 60rpx;
   width: 60rpx;
   border-radius: 50%;
   background-color: #b4282d;
+  box-sizing: border-box;
 }
 .oper-number {
   height: 60rpx;
@@ -23,4 +25,5 @@
   font-size: 45rpx;
   padding: 0 10rpx;
   text-align: center;
+  box-sizing: border-box;
 }

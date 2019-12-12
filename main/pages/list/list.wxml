@@ -1,23 +1,23 @@
 <view class="container">
   <scroll-view class="scroll-list-left" scroll-y>
-    <block wx:for="{{leftList}}" wx:for-item="leftItem" wx:for-index="leftIndex" wx:key="{{leftItem.id}}">
-      <view class="title-item {{leftCurrentItem === leftItem.title ? 'current-item' : '' }}" bindtap="selectTitle" data-title="{{leftItem.title}}">
+    <block wx:for="{{leftList}}" wx:for-item="leftItem" wx:for-index="leftIndex" wx:key="leftItem.keyID">
+      <view class="title-item {{leftCurrentItem === leftItem.title ? 'current-item' : '' }}" bindtap="selectTitle" data-title="leftItem.title">
         {{leftItem.title}}
       </view>
     </block>
   </scroll-view>
-  <scroll-view class="scroll-list-right" scroll-y lower-threshold="{{150}}" bindscrolltolower="loadmore" scroll-into-view="{{selectedTitle}}" scroll-with-animation>
-    <block wx:for="{{rightList}}" wx:for-item="parentItem" wx:for-index="parentIndex" wx:key="{{parentIndex}}">
+  <scroll-view class="scroll-list-right" scroll-y lower-threshold="{{100}}" bindscrolltolower="loadmore" scroll-into-view="{{selectedTitle}}" scroll-with-animation>
+    <block wx:for="{{rightList}}" wx:for-item="parentItem" wx:for-index="parentIndex" wx:key="parentItem.keyID">
       <!-- 类型item包裹 -->
       <view id="{{parentItem.title}}">
         <view class="title">{{parentItem.title}}</view>
-        <view class="{{'ob-' + parentIndex + subIndex}}" wx:for="{{parentItem.item}}" wx:for-item="subItem" wx:for-index="subIndex" wx:key="{{subIndex}}">
+        <view class="{{'ob-' + parentIndex + subIndex}} demo-item" wx:for="{{parentItem.item}}" wx:for-item="subItem" wx:for-index="subIndex" wx:key="subIndex">
           <!-- 骨架 -->
           <sub-skeleton>
+            <sub-item is-vip="{{isVip}}" />
             <!-- <view style="height: {{subItem.height}}px; line-height: {{subItem.height}}px">
               高度：{{subItem.height}}
             </view> -->
-            <sub-item is-vip="{{isVip}}"/>
           </sub-skeleton>
         </view>
       </view>

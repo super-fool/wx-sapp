@@ -53,8 +53,7 @@ Component({
                 "超过预定范围，从页面卸载"
               );
               this.setData({
-                showSlot: false,
-                height: res.boundingClientRect.height
+                showSlot: false
               });
             } else {
               console.log(

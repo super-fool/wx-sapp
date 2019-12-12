@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isVip: false,
+    isVip: true,
     leftList: [], // 左侧列表
     rightList: [], // 右侧列表
     selectedTitle: "", // 右侧 选择 item
@@ -41,11 +41,12 @@ Page({
     this.setData({
       [rightNowList]: {
         title: "title-" + (rightListLength + 1),
-        item: demoList
+        item: demoList,
+        keyID: "key" + (rightListLength + 1)
       },
       [leftNowList]: {
         title: "title-" + (rightListLength + 1),
-        id: rightListLength
+        keyID: "key" + (rightListLength + 1)
       }
     });
     this.createParentItemObserver(rightListLength + 1);

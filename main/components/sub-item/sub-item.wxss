@@ -1,5 +1,15 @@
 .item-container {
-  margin-bottom: 20rpx;
   border-radius: 4rpx;
+  box-sizing: border-box;
+}
+.small-image {
+  height: 120rpx;
+  width: 120rpx;
+  border-radius: 5rpx;
+  float: left;
+  margin-right: 10rpx;
+}
+.image-cont {
   display: block;
+  width: 100%;
 }
