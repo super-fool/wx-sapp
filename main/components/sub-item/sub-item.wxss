@@ -1,6 +1,5 @@
 .item-container {
   margin-bottom: 20rpx;
   border-radius: 4rpx;
-  box-shadow: 0 0 20rpx 5rpx #f3efef;
   display: block;
 }

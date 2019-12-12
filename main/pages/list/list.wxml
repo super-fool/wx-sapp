@@ -11,7 +11,7 @@
       <!-- 类型item包裹 -->
       <view id="{{parentItem.title}}">
         <view class="title">{{parentItem.title}}</view>
-        <view class="{{'ob-' + parentIndex}}" wx:for="{{parentItem.item}}" wx:for-item="subItem" wx:key="{{index}}">
+        <view class="{{'ob-' + parentIndex + subIndex}}" wx:for="{{parentItem.item}}" wx:for-item="subItem" wx:for-index="subIndex" wx:key="{{subIndex}}">
           <!-- 骨架 -->
           <sub-skeleton>
             <!-- <view style="height: {{subItem.height}}px; line-height: {{subItem.height}}px">

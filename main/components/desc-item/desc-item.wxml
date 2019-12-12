@@ -1,18 +1,21 @@
 <view class="bottom-item">
     <view class="desc-cont">
+        <!-- title -->
         <text class="desc-font">招牌卤煮大闸蟹</text>
-        <block wx:if="{{isVip}}">
-            <view>
+        <!-- vip -->
+        <!-- <block wx:if="{{isVip}}"> -->
+            <view class="{{isVip ? '' : 'bottom-item'}}">
                 <text class="desc-price desc-font">¥128</text>
                 <text class="font22 color666">/斤</text>
-                <text class="color999 font22 ml-10">会员价：¥108</text>
+                <text class="color999 font22 ml-10" hidden="isVip">会员价：¥108</text>
             </view>
             <view>
                 <image src="/assets/images/recommend-icon.png" mode="aspectFill" class="recommend-icon" lazy-load />
                 <text class="color666 font22 ml-10">666666人推荐</text>
             </view>
-        </block>
-        <block wx:else>
+        <!-- </block> -->
+        <!-- not vip -->
+        <!-- <block wx:else>
             <view class="bottom-item">
                 <view>
                     <text class="desc-price desc-font">¥128</text>
@@ -23,7 +26,7 @@
                     <text class="color666 font22 ml-10">666666人推荐</text>
                 </view>
             </view>
-        </block>
+        </block> -->
     </view>
     <oper-item />
 </view>
