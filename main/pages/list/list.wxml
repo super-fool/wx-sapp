@@ -1,7 +1,7 @@
 <view class="container">
   <scroll-view class="scroll-list-left" scroll-y>
     <block wx:for="{{leftList}}" wx:for-item="leftItem" wx:for-index="leftIndex" wx:key="leftItem.keyID">
-      <view class="title-item {{leftCurrentItem === leftItem.title ? 'current-item' : '' }}" bindtap="selectTitle" data-title="leftItem.title">
+      <view class="title-item {{leftCurrentItem === leftItem.title ? 'current-item' : '' }}" bindtap="selectTitle" data-title="{{leftItem.title}}">
         {{leftItem.title}}
       </view>
     </block>
