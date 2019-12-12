@@ -1,0 +1,41 @@
+.bottom-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recommend-icon {
+  height: 27rpx;
+  width: 27rpx;
+  display: inline-block;
+}
+.desc-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* margin-left: 20rpx; */
+}
+.desc-price {
+  color: #b4282d;
+}
+.desc-font {
+  font-size: 30rpx;
+}
+.color999 {
+  color: #999999;
+}
+
+.font22 {
+  font-size: 22rpx;
+}
+.color666 {
+  color: #666666;
+}
+.ml-10 {
+  margin-left: 10rpx;
+}
+.ml-20 {
+  margin-left: 20rpx;
+}

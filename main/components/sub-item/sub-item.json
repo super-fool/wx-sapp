@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "desc-item": "../desc-item/desc-item",
+    "oper-item": "../oper-item/oper-item"
+  }
+}

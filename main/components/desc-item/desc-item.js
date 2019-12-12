@@ -1,4 +1,4 @@
-// components/bigItem/bigItem.js
+// components/desc-item/desc-item.js
 Component({
   /**
    * 组件的属性列表

@@ -6,16 +6,18 @@
       </view>
     </block>
   </scroll-view>
-  <scroll-view class="scroll-list-right" scroll-y lower-threshold="{{100}}" bindscrolltolower="loadmore" scroll-into-view="{{selectedTitle}}" scroll-with-animation="{{true}}">
+  <scroll-view class="scroll-list-right" scroll-y lower-threshold="{{150}}" bindscrolltolower="loadmore" scroll-into-view="{{selectedTitle}}" scroll-with-animation>
     <block wx:for="{{rightList}}" wx:for-item="parentItem" wx:for-index="parentIndex" wx:key="{{parentIndex}}">
+      <!-- 类型item包裹 -->
       <view id="{{parentItem.title}}">
         <view class="title">{{parentItem.title}}</view>
-        <view class="demo-item {{'ob-' + parentIndex}}" wx:for="{{parentItem.item}}" wx:for-item="subItem" wx:key="{{index}}">
+        <view class="{{'ob-' + parentIndex}}" wx:for="{{parentItem.item}}" wx:for-item="subItem" wx:key="{{index}}">
           <!-- 骨架 -->
           <sub-skeleton>
-            <view style="height: {{subItem.height}}px; line-height: {{subItem.height}}px">
+            <!-- <view style="height: {{subItem.height}}px; line-height: {{subItem.height}}px">
               高度：{{subItem.height}}
-            </view>
+            </view> -->
+            <sub-item is-vip="{{isVip}}"/>
           </sub-skeleton>
         </view>
       </view>

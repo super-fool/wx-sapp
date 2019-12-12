@@ -36,7 +36,7 @@ Component({
       // 监听进入屏幕的范围relativeToViewport({top: xxx, bottom: xxx})
       //let info = wx.getStorageSync("SystemInfo");
       let { windowHeight = 667 } = wx.getSystemInfoSync();
-      let showNum = 2; //超过屏幕的数量，目前这个设置是上下2屏
+      let showNum = 3; //超过屏幕的数量，目前这个设置是上下2屏
       try {
         this.extData.itemObserver = this.createIntersectionObserver();
         this.extData.itemObserver

@@ -1,0 +1,5 @@
+<view class="oper-container">
+    <image class="reduce-frame" src="/assets/images/reduce-icon.png" hidden="{{isChoose}}" data-operate="{{false}}" bindtap="operNum" />
+    <text class="oper-number" hidden="{{isChoose}}">{{chosenNum}}</text>
+    <image class="add-frame" src="/assets/images/add-icon.png" data-operate bindtap="operNum" />
+</view>

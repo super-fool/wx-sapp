@@ -1,0 +1,31 @@
+<view class="item-container">
+    <!-- mini -->
+    <block wx:if="{{subIndex === 1 || subIndex === 2}}">
+        <image src="/assets/images/bigger-icon.png" mode="widthFix" />
+        <desc-item />
+    </block>
+    <!-- small -->
+    <block wx:elif="{{subIndex === 3 || subIndex === 4}}">
+        <image src="/assets/images/mini&small.png" mode="widthFix" />
+        <desc-item />
+    </block>
+    <!-- biggest -->
+    <block wx:elif="{{subIndex === 5 || subIndex === 6}}">
+        <image src="/assets/images/biggest-icon.png" mode="widthFix" />
+        <desc-item />
+    </block>
+    <!-- bigger -->
+    <block wx:elif="{{subIndex === 7 || subIndex === 8}}">
+        <image src="/assets/images/bigger-icon.png" mode="widthFix" />
+        <desc-item />
+    </block>
+    <!-- big -->
+    <block wx:elif="{{subIndex === 9}}">
+        <image src="/assets/images/big-icon.png" mode="widthFix" />
+        <desc-item />
+    </block>
+    <!-- none-img -->
+    <block wx:else>
+        <desc-item />
+    </block>
+</view>

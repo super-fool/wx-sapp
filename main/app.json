@@ -6,9 +6,10 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#646464",
-    "navigationBarTitleText": "进击的前端",
+    "navigationBarTitleText": "多人点餐",
     "navigationBarTextStyle": "white"
   },
   "debug": false,
+  "workers": "workers",
   "sitemapLocation": "sitemap.json"
 }

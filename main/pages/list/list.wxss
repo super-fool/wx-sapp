@@ -7,7 +7,7 @@
   border-right: #f1f1f1 solid 1px;
 }
 .title-item {
-  margin: 20px 0;
+  display: block;
   padding: 20px 0;
   border-bottom: 1px solid #f1f1f1;
 }
@@ -17,6 +17,7 @@
 .scroll-list-right {
   height: 100vh;
   width: 70vw;
+  margin-right: 10px;
 }
 
 .title {
@@ -24,15 +25,4 @@
   font: 20px 700;
   color: #333333;
   margin: 20rpx;
-}
-
-.demo-item {
-  text-align: center;
-}
-
-.demo-item:nth-child(2n) {
-  background: #f1f1f1;
-}
-.demo-item:nth-child(2n + 1) {
-  background: #d1d1d1;
 }
